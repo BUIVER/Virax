@@ -14,6 +14,8 @@
 		4B2485D3233A2E2C00374E6D /* Work_Agency.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B2485D1233A2E2C00374E6D /* Work_Agency.xcdatamodeld */; };
 		4B2485D5233A2E2E00374E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2485D4233A2E2E00374E6D /* Assets.xcassets */; };
 		4B2485D8233A2E2E00374E6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2485D6233A2E2E00374E6D /* LaunchScreen.storyboard */; };
+		4B3983A6233A44EA0085CC54 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3983A5233A44EA0085CC54 /* Student.swift */; };
+		4B3983A8233A4E800085CC54 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3983A7233A4E800085CC54 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4B2485D4233A2E2E00374E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B2485D7233A2E2E00374E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B2485D9233A2E2E00374E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B3983A5233A44EA0085CC54 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		4B3983A7233A4E800085CC54 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		4B2485C7233A2E2C00374E6D /* Work Agency */ = {
 			isa = PBXGroup;
 			children = (
+				4B3983AE233B5CA30085CC54 /* Model */,
 				4B2485C8233A2E2C00374E6D /* AppDelegate.swift */,
 				4B2485CA233A2E2C00374E6D /* SceneDelegate.swift */,
 				4B2485CC233A2E2C00374E6D /* ViewController.swift */,
@@ -68,6 +73,23 @@
 				4B2485D1233A2E2C00374E6D /* Work_Agency.xcdatamodeld */,
 			);
 			path = "Work Agency";
+			sourceTree = "<group>";
+		};
+		4B3983AD233B5C9A0085CC54 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				4B3983A5233A44EA0085CC54 /* Student.swift */,
+				4B3983A7233A4E800085CC54 /* User.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		4B3983AE233B5CA30085CC54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B3983AD233B5C9A0085CC54 /* Structures */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +165,9 @@
 			files = (
 				4B2485CD233A2E2C00374E6D /* ViewController.swift in Sources */,
 				4B2485D3233A2E2C00374E6D /* Work_Agency.xcdatamodeld in Sources */,
+				4B3983A8233A4E800085CC54 /* User.swift in Sources */,
 				4B2485C9233A2E2C00374E6D /* AppDelegate.swift in Sources */,
+				4B3983A6233A44EA0085CC54 /* Student.swift in Sources */,
 				4B2485CB233A2E2C00374E6D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
