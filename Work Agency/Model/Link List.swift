@@ -11,6 +11,7 @@ import Foundation
 enum Links: String {
     case login = "/login"
     case profile = "/profile"
+    case signUp = "/register"
     case company = "/company/"
     case student = "/student/"
 }

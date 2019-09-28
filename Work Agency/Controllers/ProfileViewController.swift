@@ -9,13 +9,23 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    var studentUser: Student?
+    let customView = UIStudentProfile()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fillData()
         // Do any additional setup after loading the view.
     }
-    
+    func fillData() {
+        if studentUser != nil {
+        customView.isUserInteractionEnabled = false
+        self.view.addSubview(customView)
+        self.view.isUserInteractionEnabled = false
+        }
+        else {
+            //customView.isUserInteractionEnabled = true
+        }
+    }
 
     /*
     // MARK: - Navigation

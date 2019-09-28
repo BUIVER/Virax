@@ -9,5 +9,5 @@
 import Foundation
 
 enum Roles: Int {
-    case admin = 0, company, student
+    case admin = 0, student, company
 }

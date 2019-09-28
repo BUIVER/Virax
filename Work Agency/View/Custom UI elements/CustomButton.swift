@@ -10,14 +10,14 @@ import UIKit
 
 @IBDesignable
 class CustomButton: UIButton {
-    var cornerRadius: CGFloat = 6.0
+        var cornerRadius: CGFloat = 6.0
         var borderWidth: CGFloat = 2.0
-        var borderColor = UIColor.systemYellow.cgColor
+        var borderColor = CGColor(srgbRed: 0/255.0, green: 102/255.0, blue: 94/255.0, alpha: 1.0)
 
         @IBInspectable var titleText: String? {
             didSet {
                 self.setTitle(titleText, for: .normal)
-                self.setTitleColor(UIColor.systemBlue, for: .normal)
+                self.setTitleColor(UIColor(cgColor: borderColor), for: .normal)
             }
         }
 

@@ -17,10 +17,6 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         network = Network()
-        emailTextField.borderStyle = .roundedRect
-        emailTextField.layer.borderColor = UIColor.systemRed.cgColor
-        emailTextField.layer.cornerRadius = 8
-        emailTextField.layer.borderWidth = 1.2
         // Do any additional setup after loading the view. 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -36,10 +32,14 @@ class SignInViewController: UIViewController {
             if let token = responseData.value(forKey: "token") as? String {
                 self.defaults.set(token, forKey: "token")
                 self.network.createGetRequestWithHeader(Links.profile.rawValue, token, completion: { data in
+                    self.performSegue(withIdentifier: "signInSegue", sender: nil)
                     print(data)
                 })
             }
         })
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
     }
 }
 
