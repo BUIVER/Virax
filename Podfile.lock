@@ -1,0 +1,20 @@
+PODS:
+  - Nuke (8.2.0)
+  - TagListView (1.4.0)
+
+DEPENDENCIES:
+  - Nuke
+  - TagListView (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nuke
+    - TagListView
+
+SPEC CHECKSUMS:
+  Nuke: 0134d56b7c9dd3e69e9bce8bdcb37c2e0d55469f
+  TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
+
+PODFILE CHECKSUM: 33333fa7695de4aef0ee346ae2f89ac52b4773ef
+
+COCOAPODS: 1.6.1

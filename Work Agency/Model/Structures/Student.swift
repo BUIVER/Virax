@@ -12,7 +12,8 @@ struct Student {
     var firstName: String
     var lastName: String
     var age: Int
-    var userID: Int
+    var userId: Int
     var isPrivate: Bool
     var photoURL: String
+    var roleId: Int
 }
