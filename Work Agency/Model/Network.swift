@@ -64,7 +64,7 @@ class Network {
         })
         dataTask.resume()
     }
-    func createGetRequestWithHeader(_ path: String, _ token: String, completion: @escaping ([NSDictionary]?) -> Void) {
+    func createGetRequestWithHeader(_ path: String, _ token: String, completion: @escaping (NSDictionary?) -> Void) {
         var localUrl = baseUrl
         localUrl?.appendPathComponent(path)
         guard let url = localUrl else {return}
@@ -80,7 +80,7 @@ class Network {
                 print(response ?? "")
             }
             do {
-                let jsonData = try JSONSerialization.jsonObject(with: data ?? Data(), options: .mutableContainers) as? [NSDictionary]
+                let jsonData = try JSONSerialization.jsonObject(with: data ?? Data(), options: .mutableContainers) as? NSDictionary
                 completion(jsonData)
             } catch {
                 print(error.localizedDescription)

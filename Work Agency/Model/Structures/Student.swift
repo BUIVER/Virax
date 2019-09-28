@@ -11,9 +11,11 @@ import Foundation
 struct Student {
     var firstName: String
     var lastName: String
-    var age: Int
-    var userId: Int
+    var birthday: String
     var isPrivate: Bool
+    var livingInfo: String
     var photoURL: String
-    var roleId: Int
+    var skills: [NSDictionary]
+    var personalDetails: String
+    var rating: Int
 }

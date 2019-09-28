@@ -29,12 +29,11 @@ class SignUpViewController: UIViewController {
         if (password.text == passwordConfirmation.text) {
             let user = User(email: emailTextField.text, password: password.text, roleId: roleId)
                    network.createPostRequest(Links.signUp.rawValue, httpBody: user, completion: { data in
-                        guard let responseData = data else {return}
-                    let alert = UIAlertController(title: "Confirmation", message: data?.value(forKey: "message") as! String, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                    DispatchQueue.main.async {
-                        self.present(alert, animated: true, completion: nil)
-                    }
+                    let alert = UIAlertController(title: "Confirmation", message: data?.value(forKey: "message") as? String, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                        DispatchQueue.main.async {
+                            self.present(alert, animated: true, completion: nil)
+                        }
                     })
                }
                else {

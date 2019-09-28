@@ -7,24 +7,49 @@
 //
 
 import UIKit
-
+import Nuke
+import TagListView
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet var studentProfileImage: UIImageView!
+    @IBOutlet var firstNameLabel: UITextField!
+    @IBOutlet var lastNameLabel: UITextField!
+    @IBOutlet var ageLabel: UITextField!
+    @IBOutlet var locationLabel: UITextField!
+    @IBOutlet var ratingLabel: UILabel!
+    @IBOutlet var personalInfoTextView: UITextView!
+    @IBOutlet var skillsView: TagListView!
+    
+    
+    @IBOutlet var companyProfileImage: UIImageView!
+    @IBOutlet var companyNameLabel: UITextField!
+    @IBOutlet var companyLocationLabel: UITextField!
+    @IBOutlet var companyInfoTextView: UITextView!
+    
+    
     var studentUser: Student?
-    let customView = UIStudentProfile()
     override func viewDidLoad() {
         super.viewDidLoad()
         fillData()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+    }
     func fillData() {
-        if studentUser != nil {
-        customView.isUserInteractionEnabled = false
-        self.view.addSubview(customView)
+        guard let url = URL(string: studentUser?.photoURL ?? "https://i07.fotocdn.net/s123/2950fc2e1fadccab/user_xl/2816616767.jpg") else {return}
+        loadImage(with: url, into: studentProfileImage)
+        firstNameLabel.text = studentUser?.firstName
+        lastNameLabel.text = studentUser?.lastName
+        studentUser?.birthday.removeLast(14)
+        ageLabel.text = studentUser?.birthday
+        locationLabel.text = studentUser?.livingInfo
+        ratingLabel.text = studentUser?.rating.description
+        personalInfoTextView.text = studentUser?.personalDetails
+        studentUser?.skills.forEach({ skill in
+            guard let tagName = skill.value(forKey: "name") as? String else {return}
+            skillsView.addTag(tagName)
+        })
         self.view.isUserInteractionEnabled = false
-        }
-        else {
-            //customView.isUserInteractionEnabled = true
-        }
     }
 
     /*
