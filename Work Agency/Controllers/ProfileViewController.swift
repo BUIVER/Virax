@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var personalInfoTextView: UITextView!
     @IBOutlet var skillsView: TagListView!
-    
+    @IBOutlet var editButton: UIButton!
     
     @IBOutlet var companyProfileImage: UIImageView!
     @IBOutlet var companyNameLabel: UITextField!
@@ -49,9 +49,21 @@ class ProfileViewController: UIViewController {
             guard let tagName = skill.value(forKey: "name") as? String else {return}
             skillsView.addTag(tagName)
         })
-        self.view.isUserInteractionEnabled = false
+        toggleInteraction()
     }
-
+    func toggleInteraction() {
+        firstNameLabel.isEnabled.toggle()
+        lastNameLabel.isEnabled.toggle()
+        ageLabel.isEnabled.toggle()
+        locationLabel.isEnabled.toggle()
+        personalInfoTextView.isEditable.toggle()
+    }
+    @IBAction func editView() {
+        print(self.firstNameLabel.isEnabled)
+        toggleInteraction()
+        print(self.firstNameLabel.isEnabled)
+        self.editButton.titleLabel?.text = self.firstNameLabel.isEnabled ? "Save" : "Edit"
+    }
     /*
     // MARK: - Navigation
 

@@ -30,6 +30,7 @@ class SignInViewController: UIViewController {
             guard let responseData = data else {return}
             if let token = responseData.value(forKey: "token") as? String {
                 self.defaults.set(token, forKey: "token")
+                self.defaults.set(responseData.value(forKey: "roleId"), forKey: "roleId")
                 self.network.createGetRequestWithHeader(Links.profile.rawValue, token, completion: { data in
                     
                     guard let firstName = data?.value(forKey: "firstName") as? String else {return}

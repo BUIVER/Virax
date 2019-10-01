@@ -27,7 +27,13 @@
 		4B57FBC6233F5D9600607885 /* Link List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57FBC5233F5D9600607885 /* Link List.swift */; };
 		4B83E8FE2340050000F09B2E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E8FD2340050000F09B2E /* SearchViewController.swift */; };
 		4B83E90023400C2C00F09B2E /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E8FF23400C2C00F09B2E /* Search.swift */; };
-		4B83E90323400C5400F09B2E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E90223400C5400F09B2E /* SearchTableViewCell.swift */; };
+		4B83E90323400C5400F09B2E /* SearchStudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E90223400C5400F09B2E /* SearchStudentTableViewCell.swift */; };
+		4B83E9052340318900F09B2E /* Univercity Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E9042340318900F09B2E /* Univercity Member.swift */; };
+		4B83E9072340331E00F09B2E /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E9062340331E00F09B2E /* SearchResultViewController.swift */; };
+		4B83E9092340339F00F09B2E /* Vacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E9082340339F00F09B2E /* Vacancy.swift */; };
+		4B83E90D234037CA00F09B2E /* SearchCompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E90C234037CA00F09B2E /* SearchCompanyTableViewCell.swift */; };
+		4B83E90F2340696A00F09B2E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E90E2340696A00F09B2E /* Company.swift */; };
+		4B83E9112340AF7200F09B2E /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E9102340AF7200F09B2E /* LogoImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +58,13 @@
 		4B57FBC5233F5D9600607885 /* Link List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Link List.swift"; sourceTree = "<group>"; };
 		4B83E8FD2340050000F09B2E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4B83E8FF23400C2C00F09B2E /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		4B83E90223400C5400F09B2E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		4B83E90223400C5400F09B2E /* SearchStudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudentTableViewCell.swift; sourceTree = "<group>"; };
+		4B83E9042340318900F09B2E /* Univercity Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Univercity Member.swift"; sourceTree = "<group>"; };
+		4B83E9062340331E00F09B2E /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		4B83E9082340339F00F09B2E /* Vacancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancy.swift; sourceTree = "<group>"; };
+		4B83E90C234037CA00F09B2E /* SearchCompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompanyTableViewCell.swift; sourceTree = "<group>"; };
+		4B83E90E2340696A00F09B2E /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		4B83E9102340AF7200F09B2E /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
 		6436941F0FA4E6ED74805D22 /* Pods_Work_Agency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Work_Agency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A620E3CDDB6AF78D8B51AD26 /* Pods-Work Agency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Work Agency.release.xcconfig"; path = "Target Support Files/Pods-Work Agency/Pods-Work Agency.release.xcconfig"; sourceTree = "<group>"; };
 		D65B72643073EFA8A9EF90BC /* Pods-Work Agency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Work Agency.debug.xcconfig"; path = "Target Support Files/Pods-Work Agency/Pods-Work Agency.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +132,7 @@
 			children = (
 				4B2DFEEA233F7EFE00DD5834 /* CustomButton.swift */,
 				4B2DFEEE233F909400DD5834 /* CustomTextField.swift */,
+				4B83E9102340AF7200F09B2E /* LogoImageView.swift */,
 			);
 			path = "Custom UI elements";
 			sourceTree = "<group>";
@@ -127,6 +140,7 @@
 		4B2DFEF2233FA83000DD5834 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B83E9062340331E00F09B2E /* SearchResultViewController.swift */,
 				4B2485CC233A2E2C00374E6D /* SignInViewController.swift */,
 				4B2DFEE6233F71F000DD5834 /* SignUpViewController.swift */,
 				4B2DFEF5233FA89900DD5834 /* ProfileViewController.swift */,
@@ -138,9 +152,12 @@
 		4B3983AD233B5C9A0085CC54 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
+				4B83E9082340339F00F09B2E /* Vacancy.swift */,
 				4B3983A5233A44EA0085CC54 /* Student.swift */,
 				4B3983A7233A4E800085CC54 /* User.swift */,
 				4B83E8FF23400C2C00F09B2E /* Search.swift */,
+				4B83E9042340318900F09B2E /* Univercity Member.swift */,
+				4B83E90E2340696A00F09B2E /* Company.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -159,7 +176,8 @@
 		4B83E90123400C3300F09B2E /* Search Cell */ = {
 			isa = PBXGroup;
 			children = (
-				4B83E90223400C5400F09B2E /* SearchTableViewCell.swift */,
+				4B83E90223400C5400F09B2E /* SearchStudentTableViewCell.swift */,
+				4B83E90C234037CA00F09B2E /* SearchCompanyTableViewCell.swift */,
 			);
 			path = "Search Cell";
 			sourceTree = "<group>";
@@ -305,19 +323,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2485CD233A2E2C00374E6D /* SignInViewController.swift in Sources */,
+				4B83E9092340339F00F09B2E /* Vacancy.swift in Sources */,
 				4B83E90023400C2C00F09B2E /* Search.swift in Sources */,
 				4B2485D3233A2E2C00374E6D /* Work_Agency.xcdatamodeld in Sources */,
 				4B3983A8233A4E800085CC54 /* User.swift in Sources */,
 				4B2DFEE9233F73A100DD5834 /* Roles.swift in Sources */,
 				4B2485C9233A2E2C00374E6D /* AppDelegate.swift in Sources */,
+				4B83E90F2340696A00F09B2E /* Company.swift in Sources */,
+				4B83E9052340318900F09B2E /* Univercity Member.swift in Sources */,
 				4B57FBC6233F5D9600607885 /* Link List.swift in Sources */,
 				4B3983A6233A44EA0085CC54 /* Student.swift in Sources */,
 				4B2DFEEB233F7EFE00DD5834 /* CustomButton.swift in Sources */,
+				4B83E9072340331E00F09B2E /* SearchResultViewController.swift in Sources */,
 				4B83E8FE2340050000F09B2E /* SearchViewController.swift in Sources */,
 				4B2DFEEF233F909400DD5834 /* CustomTextField.swift in Sources */,
+				4B83E9112340AF7200F09B2E /* LogoImageView.swift in Sources */,
 				4B2DFEE7233F71F000DD5834 /* SignUpViewController.swift in Sources */,
+				4B83E90D234037CA00F09B2E /* SearchCompanyTableViewCell.swift in Sources */,
 				4B2DFEF6233FA89900DD5834 /* ProfileViewController.swift in Sources */,
-				4B83E90323400C5400F09B2E /* SearchTableViewCell.swift in Sources */,
+				4B83E90323400C5400F09B2E /* SearchStudentTableViewCell.swift in Sources */,
 				4B57FBC4233F5B4600607885 /* Network.swift in Sources */,
 				4B2485CB233A2E2C00374E6D /* SceneDelegate.swift in Sources */,
 			);

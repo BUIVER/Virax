@@ -88,4 +88,28 @@ class Network {
         })
         dataTask.resume()
     }
+    func createGetRequestWithHeaderArrayed(_ path: String, _ token: String, completion: @escaping ([NSDictionary]?) -> Void) {
+        var localUrl = baseUrl
+        localUrl?.appendPathComponent(path)
+        guard let url = localUrl else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+        let dataTask = session.dataTask(with: request, completionHandler: {data, response, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+                completion(nil)
+            }
+            if response != nil {
+                print(response ?? "")
+            }
+            do {
+                let jsonData = try JSONSerialization.jsonObject(with: data ?? Data(), options: .mutableContainers) as? [NSDictionary]
+                completion(jsonData)
+            } catch {
+                print(error.localizedDescription)
+            }
+        })
+        dataTask.resume()
+    }
 }

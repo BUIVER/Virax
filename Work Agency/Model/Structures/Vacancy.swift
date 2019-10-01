@@ -1,5 +1,5 @@
 //
-//  SearchCell.swift
+//  Vacancy.swift
 //  Work Agency
 //
 //  Created by Ivan Ermak on 9/29/19.
@@ -8,9 +8,11 @@
 
 import Foundation
 
-struct VacancySearch {
+struct Vacancy {
     var name: String
-    var companyName: String
-    var id: Int
+    var description: String
+    var skills: [NSDictionary]
+    var status: String
+    var company: Company
     var updatedAt: String
 }

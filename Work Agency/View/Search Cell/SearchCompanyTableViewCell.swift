@@ -1,5 +1,5 @@
 //
-//  SearchTableViewCell.swift
+//  SearchCompanyTableViewCell.swift
 //  Work Agency
 //
 //  Created by Ivan Ermak on 9/29/19.
@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import TagListView
 
-class SearchTableViewCell: UITableViewCell {
+class SearchCompanyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var studentSkillsLabel: TagListView!
+    @IBOutlet weak var studentRatingLabel: UILabel!
+    @IBOutlet weak var studentNameLabel: UILabel!
+    var id = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
